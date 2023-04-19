@@ -123,6 +123,8 @@ Caso dê tudo certo, a resposta será assim:
 
 Está rota fornece os dados do usuário e um objeto e pode servir para uma feature de autologin.
 
+<h2 align ='center'> Produtos </h2>
+
 `GET /products`
 
 ```
