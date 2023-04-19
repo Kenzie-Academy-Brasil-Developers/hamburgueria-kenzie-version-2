@@ -97,20 +97,36 @@ Caso dê tudo certo, a resposta será assim:
 }
 ```
 
-Com essa resposta, vemos que temos duas informações, o user e o token respectivo, dessa forma você pode guardar o token no localStorage para fazer a gestão do usuário no seu frontend.
-
 ## Rotas que necessitam de autorização
 
 Rotas que necessitam de autorização deve ser informado no cabeçalho da requisição o campo "Authorization", dessa forma:
 
 > Authorization: Bearer {token}
-Após o usuário estar logado, ele deve conseguir buscar os produtos da hamburgueria:
 
+<h2 align = "center"> Autologin </h2>
+
+`GET /users/:userId`
+
+Não é necessário um corpo, mas será necessária a autorização nesta rota
+
+Caso dê tudo certo, a resposta será assim:
+
+`GET /users/:userId - FORMATO DA RESPOSTA - STATUS 200`
+
+```json
+{
+   "id": "c110dbb6-beb9-4682-ab63-2c12a570d66b",
+   "name": "John Doe",
+   "email": "johndoe@email.com"
+} 
+```
+
+Está rota fornece os dados do usuário e um objeto e pode servir para uma feature de autologin.
 
 `GET /products`
 
 ```
-Não é necessário um corpo da requisição.
+Não é necessário um corpo da requisição mas será necessária a autorização.
 ```
 Caso dê tudo certo, a resposta será assim:
 
