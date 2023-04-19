@@ -107,7 +107,9 @@ Rotas que necessitam de autorização deve ser informado no cabeçalho da requis
 
 `GET /users/:userId`
 
+```
 Não é necessário um corpo, mas será necessária a autorização nesta rota
+```
 
 Caso dê tudo certo, a resposta será assim:
 
